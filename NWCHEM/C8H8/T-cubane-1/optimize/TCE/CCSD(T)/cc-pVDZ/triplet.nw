@@ -1,0 +1,50 @@
+title "cubane T-biradical CCSD/cc-pVDZ geometry optimization"
+
+#permanent_dir /mnt/scratch
+#scratch_dir /mnt/scratch
+
+memory stack 100 mb heap 100 mb global 2000 mb
+
+geometry
+ symmetry C2v
+ H                     2.05734129    -1.32981120     0.02496974
+ C                     1.09520984    -0.79607173    -0.03872782
+ H                     2.05734129     1.32981120     0.02496974
+ C                     1.09520984     0.79607173    -0.03872782
+ H                     0.00000000    -1.59258557    -2.05035614
+ C                     0.00000000    -1.20794408    -1.02589691
+ H                     0.00000000     1.59258557    -2.05035614
+ C                     0.00000000     1.20794408    -1.02589691
+ H                     0.00000000    -1.45028854     1.97989592
+ C                     0.00000000    -0.78106969     1.10677261
+ H                     0.00000000     1.45028854     1.97989592
+ C                     0.00000000     0.78106969     1.10677261
+ H                    -2.05734129    -1.32981120     0.02496974
+ C                    -1.09520984    -0.79607173    -0.03872782
+ H                    -2.05734129     1.32981120     0.02496974
+ C                    -1.09520984     0.79607173    -0.03872782
+end
+
+scf
+ direct
+ triplet
+ uhf
+end
+
+basis spherical
+ H library cc-pVDZ
+ C library cc-pVDZ
+end
+
+tce
+ ccsd(t)
+ 2eorb
+ 2emet 5
+ freeze atomic
+end
+
+driver
+ xyz
+end
+
+task tce optimize
