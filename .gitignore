@@ -9,3 +9,4 @@ NWCHEM/**/*.c
 NWCHEM/**/*.cfock
 NWCHEM/**/*.drv.hess
 NWCHEM/**/*.mp2nos
+NWCHEM/**/*.gridpts.*

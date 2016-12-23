@@ -1,0 +1,22 @@
+title "cubane def2-QZVPP DFT geometry optimization"
+
+geometry
+ symmetry Oh
+ H                     1.41109888     1.41109888     1.41109888
+ C                     0.78435179     0.78435179     0.78435179
+end
+
+basis
+ H library def2-QZVPP
+ C library def2-QZVPP
+end
+
+dft
+ xc b3lyp
+end
+
+driver
+ xyz
+end
+
+task dft optimize

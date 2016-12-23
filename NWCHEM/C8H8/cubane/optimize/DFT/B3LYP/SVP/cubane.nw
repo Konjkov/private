@@ -1,0 +1,22 @@
+title "cubane def2-SVP DFT geometry optimization"
+
+geometry
+ symmetry Oh
+ H                     1.41900073     1.41900073     1.41900073
+ C                     0.78435179     0.78435179     0.78435179
+end
+
+basis
+ H library def2-SVP
+ C library def2-SVP
+end
+
+dft
+ xc b3lyp
+end
+
+driver
+ xyz
+end
+
+task dft optimize

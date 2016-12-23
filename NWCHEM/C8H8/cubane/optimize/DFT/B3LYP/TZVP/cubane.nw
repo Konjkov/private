@@ -1,0 +1,22 @@
+title "cubane def2-TZVP DFT geometry optimization"
+
+geometry
+ symmetry Oh
+ H                     1.41150317     1.41150317     1.41150317
+ C                     0.78367213     0.78367213     0.78367213
+end
+
+basis
+ H library def2-TZVP
+ C library def2-TZVP
+end
+
+dft
+ xc b3lyp
+end
+
+driver
+ xyz
+end
+
+task dft optimize
