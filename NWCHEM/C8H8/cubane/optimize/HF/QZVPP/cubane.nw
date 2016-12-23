@@ -1,0 +1,22 @@
+title "cubane HF/def2-QZVPP geometry optimization"
+
+geometry
+ symmetry Oh
+ H                     1.40081689     1.40081689     1.40081689
+ C                     0.77853005     0.77853005     0.77853005
+end
+
+basis spherical
+ H library def2-QZVPP
+ C library def2-QZVPP
+end
+
+scf
+ direct
+end
+
+driver
+ xyz
+end
+
+task scf optimize

@@ -1,0 +1,11 @@
+#
+NWCHEM/**/*.db
+NWCHEM/**/*.p
+NWCHEM/**/*.zmat
+NWCHEM/**/*.movecs
+NWCHEM/**/*.b
+NWCHEM/**/*.b^-1
+NWCHEM/**/*.c
+NWCHEM/**/*.cfock
+NWCHEM/**/*.drv.hess
+NWCHEM/**/*.mp2nos

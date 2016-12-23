@@ -1,0 +1,35 @@
+CUBANE
+Что сделано:
+Основное состояние:
+1. Найдена геометрия начального реагента (кубан) методами HF/SVP, MP2/cc-pVDZ, CCSD/cc-pVDZ, CCSD(T)/cc-pVDZ, CCSD/cc-pVTZ (frozen core)
+2. Найдена геометрия начального реагента (кубан) методами HF/TZVP, MP2/cc-pVTZ (frozen core)
+3. Найдена ZPVE основного состояния методами HF/SVP, MP2/cc-pVDZ (frozen core)
+
+Переходное состояние:
+1. Оптимизирована геометрия переходного состояния методом: MK-MRCCSD/cc-pVDZ, MK-MRCCSD(T)/cc-pVDZ (frozen core)
+2. Найдена ZPVE переходного состояния методом: MK-MRCCSD/6-31G (одна отрицательная частота)
+
+Путь реакции
+1. Найден путь реакции MCSCF/SVP к реагенту и LIMOR-TS
+
+Что осталось сделать:
+Основное состояние:
+1. Oптимизировать геометрию основного состояния методами: CCSD(T)/cc-pVTZ (frozen core)
+2. Вычислить ZPVE основного состояния методами: CCSD/cc-pVDZ, CCSD(T)/cc-pVDZ (frozen core)
+
+Переходное состояние:
+1. Оптимизировать геометрию переходного состояния методами: MK-MRCCSD/cc-pVTZ, MK-MRCCSD(T)/cc-pVTZ (frozen core)
+2. Вычислить hessian и ZPVE переходнго состояния методами: MK-MRCCSD/cc-pVDZ, MK-MRCCSD(T)/cc-pVDZ (frozen core)
+
+Путь реакции
+1. Рассчитать путь реакции CCSD/cc-pVTZ, CCSD(T)/cc-pVTZ (frozen core) к реагенту и LIMOR-TS
+
+
+Energy reagent - 1 step
+Energy TS      - 1 step (3700 сек cc-pVDZ, ~9Gb)
+
+Gradient reagent -   6*2+1=13 steps (1100 сек на step cc-pVDZ)
+Gradient TS      -  13*2+1=27 steps (4600 сек на step cc-pVDZ, ~11Gb)
+
+Hessian reagent -  (24*2+1)*12+1=589 steps (полный цикл вычислений ~7,5 дней cc-pVDZ)
+Hessian TS      -  (6*2+1)*6+(12*2+1)*6+(18*2+1)*6+(24*2+1)*6+(36*2+1)*6+(42*2+1)+1=1693 steps (90 дней cc-pVDZ, 22Gb)

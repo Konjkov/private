@@ -1,0 +1,18 @@
+title "cubane HF/def2-TZVPP geometry optimization"
+
+geometry
+ symmetry Oh
+ H                     1.40138970     1.40138970     1.40138970
+ C                     0.77869825     0.77869825     0.77869825
+end
+
+basis spherical
+ H library def2-TZVPP
+ C library def2-TZVPP
+end
+
+driver
+ xyz
+end
+
+task scf optimize

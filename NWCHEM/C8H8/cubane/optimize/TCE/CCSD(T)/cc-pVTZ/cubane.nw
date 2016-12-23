@@ -1,0 +1,34 @@
+title "cubane CCSD(T)/cc-pVTZ optimize"
+
+#permanent_dir /mnt/scratch
+#scratch_dir /mnt/scratch
+# mpirun -np 4
+memory stack 100 mb heap 100 mb global 3000 mb
+
+geometry
+ symmetry D2h
+ H       1.4104      1.4104      1.4104
+ C       0.7840      0.7840      0.7840
+end
+
+scf
+ direct
+end
+
+basis spherical
+ H library cc-pVTZ
+ C library cc-pVTZ
+end
+
+tce
+ ccsd(t)
+ 2eorb
+ 2emet 5
+ freeze atomic
+end
+
+driver
+ xyz
+end
+
+task tce optimize

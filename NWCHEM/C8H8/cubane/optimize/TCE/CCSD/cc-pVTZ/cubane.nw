@@ -1,0 +1,34 @@
+title "cubane CCSD/cc-pVTZ optimize"
+
+#permanent_dir /var/tmp
+#scratch_dir /var/tmp
+
+memory stack 100 mb heap 100 mb global 3000 mb
+
+geometry
+ symmetry D2h
+ H       1.4103      1.4103      1.4103
+ C       0.7838      0.7838      0.7838
+end
+
+scf
+ direct
+end
+
+basis spherical
+ H library cc-pVTZ
+ C library cc-pVTZ
+end
+
+tce
+ ccsd
+ 2eorb
+ 2emet 5
+ freeze atomic
+end
+
+driver
+ xyz
+end
+
+task tce optimize

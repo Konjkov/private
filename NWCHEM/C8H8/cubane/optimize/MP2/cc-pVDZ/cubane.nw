@@ -1,0 +1,26 @@
+title "cubane MP2/cc-pVDZ geometry optimization"
+
+geometry
+ symmetry Oh
+ H                     1.41063149     1.41063149     1.41063149
+ C                     0.78371973     0.78371973     0.78371973
+end
+
+scf
+ direct
+end
+
+basis spherical
+ H library cc-pVDZ
+ C library cc-pVDZ
+end
+
+mp2
+ freeze atomic
+end
+
+driver
+ xyz
+end
+
+task mp2 optimize

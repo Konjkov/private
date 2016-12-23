@@ -1,0 +1,28 @@
+title "cubane MP2/cc-pVQZ geometry optimization"
+
+memory stack 1000 mb heap 100 mb global 1000 mb
+
+geometry
+ symmetry Oh
+ H      1.4100     1.4100     1.4100
+ C      0.7837     0.7837     0.7837
+end
+
+scf
+ direct
+end
+
+basis spherical
+ H library cc-pVQZ
+ C library cc-pVQZ
+end
+
+mp2
+ freeze atomic
+end
+
+driver
+ xyz
+end
+
+task mp2 optimize
