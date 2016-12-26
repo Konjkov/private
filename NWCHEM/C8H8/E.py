@@ -85,20 +85,23 @@ print "CASSCF(2.2)/SVP       ", -307.11837439, 0.136802*219474.63
 print "CASSCF(2.2)/TZVP      ", -307.44429507
 print "DFT/B3LYP/SVP         ", -309.13788368
 print "MK-MRCCSD/cc-pVDZ     ", -308.46391390
-#print "MK-MRCCSD/cc-pVTZ   ", -308.
+#print "MK-MRCCSD/cc-pVTZ     ", -308.
 print "MK-MRCCSD(T)/cc-pVDZ  ", -308.51742030
-#print "MK-MRCCSD(T)/cc-pVTZ", -308.
+#print "MK-MRCCSD(T)/cc-pVTZ  ", -308.
 print ""
 print "E transition state 2"
-print "MK-MRCCSD/cc-pVDZ     ", -308.47651808
+print "MK-MRCCSD/cc-pVDZ     ", -308.46541076
 print ""
 print "Eact kJ/mol"
 print "EXP                   ", "180.4 +- 4.2"
+print "transition state 1    "
 print "HF-CASSCF(2.2)/SVP    ", (-(-307.16662593 - -307.11837439) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
 print "HF-CASSCF(2.2)/TZVP   ", (-(-307.49141371 - -307.44429507) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
 print "(MK-MR)CCSD/cc-pVDZ   ", (-(-308.54310625 - -308.46391390) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
 print "(MK-MR)CCSD(T)/cc-pVDZ", (-(-308.58966794 - -308.51742030) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
-#print "CCSD/cc-pVTZ        ", -(-308.8170 - 0)
+#print "CCSD/cc-pVTZ          ", -(-308.8170 - 0)
+print "transition state 2    "
+print "(MK-MR)CCSD/cc-pVDZ   ", (-(-308.54310625 - -308.46541076) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
 print "dS J/mol-K at 518,273K"
 print "dS reagent            "
 print "HF/SVP                ", 86.596*4.1868
