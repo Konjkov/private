@@ -91,6 +91,7 @@ print "MK-MRCCSD(T)/cc-pVDZ  ", -308.51742030
 print ""
 print "E transition state 2"
 print "MK-MRCCSD/cc-pVDZ     ", -308.46541076
+print "MK-MRCCSD(T)/cc-pVDZ  ", -308.5212
 print ""
 print "Eact kJ/mol"
 print "EXP                   ", "180.4 +- 4.2"
@@ -100,8 +101,11 @@ print "HF-CASSCF(2.2)/TZVP   ", (-(-307.49141371 - -307.44429507) - (0.143473 - 
 print "(MK-MR)CCSD/cc-pVDZ   ", (-(-308.54310625 - -308.46391390) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
 print "(MK-MR)CCSD(T)/cc-pVDZ", (-(-308.58966794 - -308.51742030) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
 #print "CCSD/cc-pVTZ          ", -(-308.8170 - 0)
+print "PSI4/cc-pVDZ          ", (-(-308.48390107 - -308.40310100) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
+print "PSI4/cc-pVTZ          ", (-(-308.77821873 - -308.69448517) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
 print "transition state 2    "
 print "(MK-MR)CCSD/cc-pVDZ   ", (-(-308.54310625 - -308.46541076) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
+print "(MK-MR)CCSD(T)/cc-pVDZ", (-(-308.58966794 - -308.5212) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
 print "dS J/mol-K at 518,273K"
 print "dS reagent            "
 print "HF/SVP                ", 86.596*4.1868
