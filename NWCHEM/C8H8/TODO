@@ -1,13 +1,17 @@
 CUBANE
 Что сделано:
 Основное состояние:
-1. Найдена геометрия начального реагента (кубан) методами HF/SVP, MP2/cc-pVDZ, CCSD/cc-pVDZ, CCSD(T)/cc-pVDZ, CCSD/cc-pVTZ (frozen core)
-2. Найдена геометрия начального реагента (кубан) методами HF/TZVP, MP2/cc-pVTZ (frozen core)
-3. Найдена ZPVE основного состояния методами HF/SVP, MP2/cc-pVDZ (frozen core)
+1. Найдена геометрия начального реагента (кубан) методами HF/SVP, MP2/cc-pVDZ, CCSD/cc-pVDZ, CCSD(T)/cc-pVDZ (frozen core)
+2. Найдена геометрия начального реагента (кубан) методами HF/TZVP, MP2/cc-pVTZ, CCSD/cc-pVTZ (frozen core)
+3. Найдена ZPVE основного состояния методами HF/SVP, MP2/cc-pVDZ, CCSD/cc-pVDZ (frozen core)
 
-Переходное состояние:
+Переходное состояние #1:
 1. Оптимизирована геометрия переходного состояния методом: MK-MRCCSD/cc-pVDZ, MK-MRCCSD(T)/cc-pVDZ (frozen core)
 2. Найдена ZPVE переходного состояния методом: MK-MRCCSD/6-31G (одна отрицательная частота)
+
+Переходное состояние #2:
+1. Оптимизирована геометрия переходного состояния методом: MK-MRCCSD/cc-pVDZ, MK-MRCCSD(T)/cc-pVDZ (frozen core)
+2. ***
 
 Путь реакции
 1. Найден путь реакции MCSCF/SVP к реагенту и LIMOR-TS

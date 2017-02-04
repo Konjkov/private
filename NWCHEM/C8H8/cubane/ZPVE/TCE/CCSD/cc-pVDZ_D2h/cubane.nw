@@ -1,0 +1,27 @@
+title "cubane CCSD/cc-pVDZ hessian"
+
+memory stack 200 mb heap 200 mb global 2000 mb
+
+geometry
+ symmetry D2h
+ H        1.42503470     1.42503470     1.42503472
+ C        0.78961438     0.78961438     0.78961439
+end
+
+basis spherical
+ H library cc-pVDZ
+ C library cc-pVDZ
+end
+
+tce
+ ccsd
+ 2eorb
+ 2emet 5
+ freeze atomic
+end
+
+driver
+ xyz
+end
+
+task tce freq
