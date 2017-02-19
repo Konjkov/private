@@ -87,7 +87,7 @@ print "CASSCF(2.2)/SVP       ", -307.11837439, 0.136802*219474.63
 print "CASSCF(2.2)/TZVP      ", -307.44429507
 print "DFT/B3LYP/SVP         ", -309.13788368
 print "MK-MRCCSD/cc-pVDZ     ", -308.46391390
-#print "MK-MRCCSD/cc-pVTZ     ", -308.
+print "MK-MRCCSD/cc-pVTZ//MK-MRCCSD/cc-pVDZ", -308.73307760
 print "MK-MRCCSD(T)/cc-pVDZ  ", -308.51742030
 #print "MK-MRCCSD(T)/cc-pVTZ  ", -308.
 print ""
@@ -98,16 +98,15 @@ print ""
 print "Eact kJ/mol"
 print "EXP                   ", "180.4 +- 4.2"
 print "transition state 1    "
-print "HF-CASSCF(2.2)/SVP    ", (-(-307.16662593 - -307.11837439) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
-print "HF-CASSCF(2.2)/TZVP   ", (-(-307.49141371 - -307.44429507) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
-print "(MK-MR)CCSD/cc-pVDZ   ", (-(-308.54310625 - -308.46391390) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
-print "(MK-MR)CCSD(T)/cc-pVDZ", (-(-308.58966794 - -308.51742030) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
-#print "CCSD/cc-pVTZ          ", -(-308.8170 - 0)
-print "PSI4/cc-pVDZ          ", (-(-308.48390107 - -308.40310100) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
-print "PSI4/cc-pVTZ          ", (-(-308.77821873 - -308.69448517) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
+print "HF-CASSCF(6.4)/SVP    ", (-(-307.16662593 - -307.11860832) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
+print "MK-MRCCSD/cc-pVDZ     ", (-(-308.54310625 - -308.46391390) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
+print "MK-MRCCSD/cc-pVTZ     ", (-(-308.81701939 - -308.73307760) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
+print "MK-MRCCSD(T)/cc-pVDZ  ", (-(-308.58966794 - -308.51742030) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
+print ""
 print "transition state 2    "
-print "(MK-MR)CCSD/cc-pVDZ   ", (-(-308.54310625 - -308.46541076) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
-print "(MK-MR)CCSD(T)/cc-pVDZ", (-(-308.58966794 - -308.5212) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
+print "MK-MRCCSD/cc-pVDZ     ", (-(-308.54310625 - -308.46541076) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
+print "MK-MRCCSD(T)/cc-pVDZ  ", (-(-308.58966794 - -308.5212) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
+print ""
 print "dS J/mol-K at 518,273K"
 print "dS reagent            "
 print "HF/SVP                ", 86.596*4.1868
@@ -116,15 +115,13 @@ print "MP2/cc-pVDZ           ", 90.162*4.1868
 print "CCSD/cc-pVDZ          ", 89.930*4.1868
 print ""
 print "dS TS-1"
-print "CASSCF(2.2)/SVP       ", 88.729*4.1868 # 2 negative
-print "CASSCF(6.4)/SVP       ", 91.882*4.1868 # 1 negative
-print "CASSCF(8.5)/SVP       ", 91.265*4.1868 # 1 negative
+print "CASSCF(6.4)/SVP       ", 91.882*4.1868
+print "CASSCF(8.5)/SVP       ", 91.265*4.1868
 print "MK-MRCCSD/6-31G       ", 96.905*4.1868
 print ""
 print "EXP ln(A)             ", "14.68 +- 0.44"
-print "HF-CASSCF(2,2)/SVP    ", log10(kT/h * exp((88.729 - 86.596)*4.1868/R) * exp(1) * sterical_factor) # 2 negative
-print "HF-CASSCF(6,4)/SVP    ", log10(kT/h * exp((91.882 - 86.596)*4.1868/R) * exp(1) * sterical_factor) # 1 negative
-print "HF-CASSCF(8,5)/SVP    ", log10(kT/h * exp((91.265 - 86.596)*4.1868/R) * exp(1) * sterical_factor) # 1 negative
+print "HF-CASSCF(6,4)/SVP    ", log10(kT/h * exp((91.882 - 86.596)*4.1868/R) * exp(1) * sterical_factor)
+print "HF-CASSCF(8,5)/SVP    ", log10(kT/h * exp((91.265 - 86.596)*4.1868/R) * exp(1) * sterical_factor)
 print "(MK-MR)CCSD/6-31G+cc-pVDZ", log10(kT/h * exp((96.905 - 89.930)*4.1868/R) * exp(1) * sterical_factor)
 print "zero entropy          ", log10(kT/h * exp((0)*4.1868/R) * exp(1) * sterical_factor)
 print ""

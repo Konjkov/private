@@ -2,4 +2,7 @@
 
 set grid
 
-plot "bonds.dat" using 2:3 with linespoints notitle, '' using 2:3:1 with labels offset -6.0,-0.5 font "arial,8" notitle
+plot "bonds.dat" using 2:3 with linespoints notitle,\
+     "bonds.dat" using 2:3:1 with labels offset -6.0,-0.5 font "arial,8" notitle,\
+     "equlibrium.dat" using 2:3:4:5 with xyerrorbars notitle,\
+     "equlibrium.dat" using 2:3:1 with labels offset -6.0,-0.5 font "arial,8" notitle
