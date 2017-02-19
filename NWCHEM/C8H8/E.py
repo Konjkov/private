@@ -30,6 +30,8 @@ sterical_factor = 12
 
 ha2cm = 219474.63
 
+ZPVE = 28211.0
+
 # C8H8 (622.1) = 8C (711.79) + 8H(216.03*8) + dE
 # C8H8 (X) = 8C (-37.78430) + 8H(-0.5) + dE
 
@@ -49,19 +51,19 @@ ha2cm = 219474.63
 # S# = ln(1.332) * 8.314 = (2.38 +- 8.42) Дж/моль (518K)
 
 print "E reagent, ZPVE       "
-print "EXP                   ", Eh_C8H8_atom,  28211.0
-print "HF/SVP                ", -307.16662593, 0.143473*ha2cm
-print "HF/TZVP               ", -307.49141371, 0.143011*ha2cm
+print "EXP                   ", Eh_C8H8_atom,  ZPVE
+print "HF/SVP                ", -307.16662593, ZPVE/(0.143473*ha2cm)
+print "HF/TZVP               ", -307.49141371, ZPVE/(0.143011*ha2cm)
 print "HF/TZVPP              ", -307.49407724
 print "HF/QZVPP              ", -307.50667389
-print "DFT/B3LYP/SVP         ", -309.25671843, 0.133152*ha2cm
+print "DFT/B3LYP/SVP         ", -309.25671843, ZPVE/(0.133152*ha2cm)
 print "DFT/B3LYP/TZVP        ", -309.56796598
 print "DFT/B3LYP/TZVPP       ", -309.57046570
 print "DFT/B3LYP/QZVPP       ", -309.58578847
-print "MP2/cc-pVDZ           ", -308.48390107, 0.133401*ha2cm
+print "MP2/cc-pVDZ           ", -308.48390107, ZPVE/(0.133401*ha2cm)
 print "MP2/cc-pVTZ           ", -308.77821873
 print "MP2/cc-pVQZ           ", -308.87582657
-print "CCSD/cc-pVDZ          ", -308.54310625, 0.134072*ha2cm
+print "CCSD/cc-pVDZ          ", -308.54310625, ZPVE/(0.134072*ha2cm)
 print "CCSD/cc-pVTZ          ", -308.81701939
 print "CCSD(T)/cc-pVDZ       ", -308.58966794
 #print "CCSD(T)/cc-pVTZ       ", -308.
