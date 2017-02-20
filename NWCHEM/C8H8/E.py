@@ -141,4 +141,4 @@ print "MP2/cc-pVTQ           ", 0.78187341*2, (1.40904610-0.78187341)*sqrt(3)
 print "CCSD/cc-pVDZ          ", 0.78961438*2, (1.42503470-0.78961438)*sqrt(3)
 print "CCSD/cc-pVTZ          ", 0.78381707*2, (1.41035684-0.78381707)*sqrt(3)
 print "CCSD(T)/cc-pVDZ       ", 0.79205620*2, (1.42871342-0.79205620)*sqrt(3)
-print "CCSD(T)/cc-pVTZ       "
+print "DLPNO-CCSD(T)/cc-pVTZ(ORCA)", 0.786490*2, (1.414200-0.786490)*sqrt(3)
