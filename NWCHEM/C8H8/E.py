@@ -63,10 +63,12 @@ print "DFT/B3LYP/QZVPP       ", -309.58578847
 print "MP2/cc-pVDZ           ", -308.48390107, ZPVE/(0.133401*ha2cm)
 print "MP2/cc-pVTZ           ", -308.77821873
 print "MP2/cc-pVQZ           ", -308.87582657
+print "MP2/PC-1              ", -308.36376204
+print "MP2/PC-2              ", -308.75921583
 print "CCSD/cc-pVDZ          ", -308.54310625, ZPVE/(0.134072*ha2cm)
 print "CCSD/cc-pVTZ          ", -308.81701939
 print "CCSD(T)/cc-pVDZ       ", -308.58966794
-#print "CCSD(T)/cc-pVTZ       ", -308.
+#print "CCSD(T)/cc-pVTZ       ", -308.878529182021
 print ""
 print "E triplet 1           "
 print "HF/SVP (ROHF)         ", -307.12942889
@@ -83,13 +85,10 @@ print "MP2/cc-pVDZ (UHF)     ", -308.40879784
 print "CCSD/cc-pVDZ (ROHF)   ", -308.47651808
 print ""
 print "E transition state 1  "
-print "CASSCF(2.2)/SVP       ", -307.11837439, 0.136802*219474.63
-print "CASSCF(2.2)/TZVP      ", -307.44429507
-print "DFT/B3LYP/SVP         ", -309.13788368
 print "MK-MRCCSD/cc-pVDZ     ", -308.46391390
 print "MK-MRCCSD/cc-pVTZ//MK-MRCCSD/cc-pVDZ", -308.73307760
 print "MK-MRCCSD(T)/cc-pVDZ  ", -308.51742030
-#print "MK-MRCCSD(T)/cc-pVTZ  ", -308.
+#print "MK-MRCCSD(T)/cc-pVTZ//MK-MRCCSD(T)/cc-pVDZ  ", -308.
 print ""
 print "E transition state 2"
 print "MK-MRCCSD/cc-pVDZ     ", -308.46541076
@@ -98,14 +97,14 @@ print ""
 print "Eact kJ/mol"
 print "EXP                   ", "180.4 +- 4.2"
 print "transition state 1    "
-print "HF-CASSCF(6.4)/SVP    ", (-(-307.16662593 - -307.11860832) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
-print "MK-MRCCSD/cc-pVDZ     ", (-(-308.54310625 - -308.46391390) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
-print "MK-MRCCSD/cc-pVTZ     ", (-(-308.81701939 - -308.73307760) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
-print "MK-MRCCSD(T)/cc-pVDZ  ", (-(-308.58966794 - -308.51742030) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
+print "MK-MRCCSD/cc-pVDZ     ", -((-308.54310625 - -308.46391390) + (0.134072 - 0.126911) * 0.9)*Eh + R*0.518
+print "MK-MRCCSD/cc-pVTZ     ", -((-308.81701939 - -308.73307760) + (0.134072 - 0.126911) * 0.9)*Eh + R*0.518
+print "MK-MRCCSD(T)/cc-pVDZ  ", -((-308.58966794 - -308.51742030) + (0.134072 - 0.126911) * 0.9)*Eh + R*0.518
+#print "MK-MRCCSD(T)/cc-pVDZ  ",-((-308. - -308.) + (0.134072 - 0.126911) * 0.9)*Eh + R*0.518
 print ""
 print "transition state 2    "
-print "MK-MRCCSD/cc-pVDZ     ", (-(-308.54310625 - -308.46541076) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
-print "MK-MRCCSD(T)/cc-pVDZ  ", (-(-308.58966794 - -308.5212) - (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
+print "MK-MRCCSD/cc-pVDZ     ", -((-308.54310625 - -308.46541076) + (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
+print "MK-MRCCSD(T)/cc-pVDZ  ", -((-308.58966794 - -308.5212) + (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
 print ""
 print "dS J/mol-K at 518,273K"
 print "dS reagent            "
@@ -138,6 +137,8 @@ print "DFT/PBE0/QZVPP        ", 0.77924794*2, (1.40713015-0.77924794)*sqrt(3)
 print "MP2/cc-pVDZ           ", 0.78811233*2, (1.42345400-0.78811233)*sqrt(3)
 print "MP2/cc-pVTZ           ", 0.78312104*2, (1.41001962-0.78312104)*sqrt(3)
 print "MP2/cc-pVTQ           ", 0.78187341*2, (1.40904610-0.78187341)*sqrt(3)
+print "MP2/PC-1              ", 0.78287399*2, (1.41379370-0.78287399)*sqrt(3)
+print "MP2/PC-2              ", 0.78109371*2, (1.40720075-0.78109371)*sqrt(3)
 print "CCSD/cc-pVDZ          ", 0.78961438*2, (1.42503470-0.78961438)*sqrt(3)
 print "CCSD/cc-pVTZ          ", 0.78381707*2, (1.41035684-0.78381707)*sqrt(3)
 print "CCSD(T)/cc-pVDZ       ", 0.79205620*2, (1.42871342-0.79205620)*sqrt(3)

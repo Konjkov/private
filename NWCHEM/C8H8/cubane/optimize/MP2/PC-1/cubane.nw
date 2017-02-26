@@ -1,0 +1,26 @@
+title "cubane MP2/PC-1 geometry optimization"
+
+geometry
+ symmetry Oh
+ H                     1.4106     1.4106     1.4106
+ C                     0.7837     0.7837     0.7837
+end
+
+scf
+ direct
+end
+
+basis spherical
+ H library PC-1
+ C library PC-1
+end
+
+mp2
+ freeze atomic
+end
+
+driver
+ xyz
+end
+
+task mp2 optimize
