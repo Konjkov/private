@@ -68,6 +68,7 @@ print "MP2/PC-2              ", -308.75921583
 print "MP2/PC-3              ", -308.88044264
 print "CCSD/cc-pVDZ          ", -308.54310625, ZPVE/(0.134072*ha2cm)
 print "CCSD/cc-pVTZ          ", -308.81701939
+print "CCSD/PC-1             ", -308.4176
 print "CCSD(T)/cc-pVDZ       ", -308.58966794
 #print "CCSD(T)/cc-pVTZ       ", -308.878529182021
 print ""
@@ -143,5 +144,6 @@ print "MP2/PC-2              ", 0.78109371*2, (1.40720075-0.78109371)*sqrt(3)
 print "MP2/PC-3              ", 0.78093200*2, (1.40702490-0.78093200)*sqrt(3)
 print "CCSD/cc-pVDZ          ", 0.78961438*2, (1.42503470-0.78961438)*sqrt(3)
 print "CCSD/cc-pVTZ          ", 0.78381707*2, (1.41035684-0.78381707)*sqrt(3)
+print "CCSD/PC-1             ", 0.78401500*2, (1.41458322-0.78401500)*sqrt(3)
 print "CCSD(T)/cc-pVDZ       ", 0.79205620*2, (1.42871342-0.79205620)*sqrt(3)
 print "DLPNO-CCSD(T)/cc-pVTZ(ORCA)", 0.786490*2, (1.414200-0.786490)*sqrt(3)
