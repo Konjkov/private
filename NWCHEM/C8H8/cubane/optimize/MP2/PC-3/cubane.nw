@@ -1,0 +1,28 @@
+title "cubane MP2/PC-3 geometry optimization"
+
+memory stack 1000 mb heap 100 mb global 1000 mb
+
+geometry
+ symmetry Oh
+ H                     1.4107     1.4107     1.4107
+ C                     0.7811     0.7811     0.7811
+end
+
+scf
+ direct
+end
+
+basis spherical
+ H library PC-3
+ C library PC-3
+end
+
+mp2
+ freeze atomic
+end
+
+driver
+ xyz
+end
+
+task mp2 optimize
