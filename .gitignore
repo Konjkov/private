@@ -10,3 +10,13 @@ NWCHEM/**/*.cfock
 NWCHEM/**/*.drv.hess
 NWCHEM/**/*.mp2nos
 NWCHEM/**/*.gridpts.*
+
+!ORCA/**/*.inp
+!ORCA/**/*.out
+!ORCA/**/*.trj
+!ORCA/**/*.engrad
+!ORCA/**/*.hess
+!ORCA/*.dat
+!ORCA/*.py
+!ORCA/*.sh
+
