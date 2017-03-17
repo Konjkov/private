@@ -1,15 +1,10 @@
-#
-NWCHEM/**/*.db
-NWCHEM/**/*.p
-NWCHEM/**/*.zmat
-NWCHEM/**/*.movecs
-NWCHEM/**/*.b
-NWCHEM/**/*.b^-1
-NWCHEM/**/*.c
-NWCHEM/**/*.cfock
-NWCHEM/**/*.drv.hess
-NWCHEM/**/*.mp2nos
-NWCHEM/**/*.gridpts.*
+!NWCHEM/**/*.nw
+!NWCHEM/**/*.nwo
+!NWCHEM/**/*.xyz
+!NWCHEM/**/*.hess
+!NWCHEM/*.dat
+!NWCHEM/*.py
+!NWCHEM/*.sh
 
 !ORCA/**/*.inp
 !ORCA/**/*.out
@@ -19,4 +14,3 @@ NWCHEM/**/*.gridpts.*
 !ORCA/*.dat
 !ORCA/*.py
 !ORCA/*.sh
-
