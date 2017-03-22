@@ -1,0 +1,9 @@
+# ================================================================
+# Orca input file for cubane
+# ================================================================
+! LPNO-CCSD cc-pVQZ cc-pVQZ/C TightSCF
+! PAL4
+
+%maxcore 2000
+
+* xyzfile 0 1 scan.xyz
