@@ -1,3 +1,5 @@
+*
+
 !NWCHEM/**/*.nw
 !NWCHEM/**/*.nwo
 !NWCHEM/**/*.xyz
