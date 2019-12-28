@@ -28,6 +28,7 @@ basis
 end
 
 dft
+ rodft
  mult 3
  xc b3lyp
 end

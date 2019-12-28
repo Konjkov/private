@@ -1,5 +1,4 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
+#!/usr/bin/python3
 
 from math import sqrt, exp, log10
 
@@ -50,79 +49,78 @@ ZPVE = 28211.0
 # S# = ln(2.36750572112) * 8.314 = (7.16 +- 8.42) Дж/моль (298K)
 # S# = ln(1.332) * 8.314 = (2.38 +- 8.42) Дж/моль (518K)
 
-print "E reagent, ZPVE       "
-print "EXP                   ", Eh_C8H8_atom,  ZPVE
-print "HF/SVP                ", -307.16662593, ZPVE/(0.143473*ha2cm)
-print "HF/TZVP               ", -307.49141371, ZPVE/(0.143011*ha2cm)
-print "HF/TZVPP              ", -307.49407724
-print "HF/QZVPP              ", -307.50667389
-print "DFT/B3LYP/SVP         ", -309.25671843, ZPVE/(0.133152*ha2cm)
-print "DFT/B3LYP/TZVP        ", -309.56796598
-print "DFT/B3LYP/TZVPP       ", -309.57046570
-print "DFT/B3LYP/QZVPP       ", -309.58578847
-print "MP2/cc-pVDZ           ", -308.48390107, ZPVE/(0.133401*ha2cm)
-print "MP2/cc-pVTZ           ", -308.77821873
-print "MP2/cc-pVQZ           ", -308.87582657
-print "MP2/PC-1              ", -308.36376204
-print "MP2/PC-2              ", -308.75921583
-print "MP2/PC-3              ", -308.88044264
-print "CCSD/cc-pVDZ          ", -308.54310625, ZPVE/(0.134072*ha2cm)
-print "CCSD/cc-pVTZ          ", -308.81701939
-print "CCSD/PC-1             ", -308.4176
-print "CCSD(T)/cc-pVDZ       ", -308.58966794
-#print "CCSD(T)/cc-pVTZ       ", -308.878529182021
-print ""
-print "E triplet 1           "
-print "HF/SVP (ROHF)         ", -307.12942889
-print "HF/SVP (UHF)          ", -307.13696576
-print "HF/TZVP (UHF)         ", -307.46326746
-print "DFT/B3LYP/SVP (UHF)   ", -309.19214544
-print "MP2/cc-pVDZ (UHF)     ", -308.41202834
-print "CCSD/cc-pVDZ (ROHF)   ", -308.47989005
-print ""
-print "E triplet 2           "
-print "HF/SVP (UHF)          ", -307.13298580
-print "DFT/B3LYP/SVP (UHF)   ", -309.19060878
-print "MP2/cc-pVDZ (UHF)     ", -308.40879784
-print "CCSD/cc-pVDZ (ROHF)   ", -308.47651808
-print ""
-print "E transition state 1  "
-print "MK-MRCCSD/cc-pVDZ     ", -308.46391390
-print "MK-MRCCSD/cc-pVTZ//MK-MRCCSD/cc-pVDZ", -308.73307760
-print "MK-MRCCSD(T)/cc-pVDZ  ", -308.51742030
-#print "MK-MRCCSD(T)/cc-pVTZ//MK-MRCCSD(T)/cc-pVDZ  ", -308.
-print ""
-print "E transition state 2"
-print "MK-MRCCSD/cc-pVDZ     ", -308.46541076
-print "MK-MRCCSD(T)/cc-pVDZ  ", -308.5212
-print ""
-print "Eact kJ/mol"
-print "EXP                   ", "180.4 +- 4.2"
-print "transition state 1    "
-print "MK-MRCCSD/cc-pVDZ     ", -((-308.54310625 - -308.46391390) + (0.134072 - 0.126911) * 0.9)*Eh + R*0.518
-print "MK-MRCCSD/cc-pVTZ     ", -((-308.81701939 - -308.73307760) + (0.134072 - 0.126911) * 0.9)*Eh + R*0.518
-print "MK-MRCCSD(T)/cc-pVDZ  ", -((-308.58966794 - -308.51742030) + (0.134072 - 0.126911) * 0.9)*Eh + R*0.518
-#print "MK-MRCCSD(T)/cc-pVDZ  ",-((-308. - -308.) + (0.134072 - 0.126911) * 0.9)*Eh + R*0.518
-print ""
-print "transition state 2    "
-print "MK-MRCCSD/cc-pVDZ     ", -((-308.54310625 - -308.46541076) + (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
-print "MK-MRCCSD(T)/cc-pVDZ  ", -((-308.58966794 - -308.5212) + (0.143473 - 0.136802) * 0.9)*Eh + R*0.518
-print ""
-print "dS J/mol-K at 518,273K"
-print "dS reagent            "
-print "HF/SVP                ", 86.596*4.1868
-print "HF/TZVP               ", 86.592*4.1868
-print "MP2/cc-pVDZ           ", 90.162*4.1868
-print "CCSD/cc-pVDZ          ", 89.930*4.1868
-print ""
-print "dS TS-1"
-print "CASSCF(6.4)/SVP       ", 91.882*4.1868
-print "CASSCF(8.5)/SVP       ", 91.265*4.1868
-print "MK-MRCCSD/6-31G       ", 96.905*4.1868
-print ""
-print "EXP ln(A)             ", "14.68 +- 0.44"
-print "HF-CASSCF(6,4)/SVP    ", log10(kT/h * exp((91.882 - 86.596)*4.1868/R) * exp(1) * sterical_factor)
-print "HF-CASSCF(8,5)/SVP    ", log10(kT/h * exp((91.265 - 86.596)*4.1868/R) * exp(1) * sterical_factor)
-print "(MK-MR)CCSD/6-31G+cc-pVDZ", log10(kT/h * exp((96.905 - 89.930)*4.1868/R) * exp(1) * sterical_factor)
-print "zero entropy          ", log10(kT/h * exp((0)*4.1868/R) * exp(1) * sterical_factor)
-
+print("E reagent, ZPVE       ")
+print("EXP                   ", Eh_C8H8_atom,  ZPVE)
+print("HF/SVP                ", -307.16662593, ZPVE/(0.143473*ha2cm))
+print("HF/TZVP               ", -307.49141371, ZPVE/(0.143011*ha2cm))
+print("HF/TZVPP              ", -307.49407724)
+print("HF/QZVPP              ", -307.50667389)
+print("DFT/B3LYP/SVP         ", -309.25671843, ZPVE/(0.133152*ha2cm))
+print("DFT/B3LYP/TZVP        ", -309.56796598)
+print("DFT/B3LYP/TZVPP       ", -309.57046570)
+print("DFT/B3LYP/QZVPP       ", -309.58578847)
+print("MP2/cc-pVDZ           ", -308.48390107, ZPVE/(0.133401*ha2cm))
+print("MP2/cc-pVTZ           ", -308.77821873)
+print("MP2/cc-pVQZ           ", -308.87582657)
+print("MP2/PC-1              ", -308.36376204)
+print("MP2/PC-2              ", -308.75921583)
+print("MP2/PC-3              ", -308.88044264)
+print("CCSD/cc-pVDZ          ", -308.54310625, ZPVE/(0.134072*ha2cm))
+print("CCSD/cc-pVTZ          ", -308.81701939)
+print("CCSD/PC-1             ", -308.4176)
+print("CCSD(T)/cc-pVDZ       ", -308.58966794)
+print("CCSD(T)/cc-pVTZ       ", -308.878529182021)
+print("")
+print("E triplet 1           ")
+print("HF/SVP (ROHF)         ", -307.12942889)
+print("HF/SVP (UHF)          ", -307.13696576)
+print("HF/TZVP (UHF)         ", -307.46326746)
+print("DFT/B3LYP/SVP (UHF)   ", -309.19214544)
+print("MP2/cc-pVDZ (UHF)     ", -308.41202834)
+print("CCSD/cc-pVDZ (ROHF)   ", -308.47989005)
+print("")
+print("E triplet 2           ")
+print("HF/SVP (UHF)          ", -307.13298580)
+print("DFT/B3LYP/SVP (UHF)   ", -309.19060878)
+print("MP2/cc-pVDZ (UHF)     ", -308.40879784)
+print("CCSD/cc-pVDZ (ROHF)   ", -308.47651808)
+print("")
+print("E transition state 1  ")
+print("MK-MRCCSD/cc-pVDZ     ", -308.46391390)
+print("MK-MRCCSD/cc-pVTZ//MK-MRCCSD/cc-pVDZ", -308.73307760)
+print("MK-MRCCSD(T)/cc-pVDZ  ", -308.51742030)
+print("MK-MRCCSD(T)/cc-pVTZ//MK-MRCCSD(T)/cc-pVDZ  ", -308.)
+print("")
+print("E transition state 2")
+print("MK-MRCCSD/cc-pVDZ     ", -308.46541076)
+print("MK-MRCCSD(T)/cc-pVDZ  ", -308.5212)
+print("")
+print("Eact kJ/mol")
+print("EXP                   ", "180.4 +- 4.2")
+print("transition state 1    ")
+print("MK-MRCCSD/cc-pVDZ     ", -((-308.54310625 - -308.46391390) + (0.134072 - 0.126911) * 0.9)*Eh + R*0.518)
+print("MK-MRCCSD/cc-pVTZ     ", -((-308.81701939 - -308.73307760) + (0.134072 - 0.126911) * 0.9)*Eh + R*0.518)
+print("MK-MRCCSD(T)/cc-pVDZ  ", -((-308.58966794 - -308.51742030) + (0.134072 - 0.126911) * 0.9)*Eh + R*0.518)
+print("MK-MRCCSD(T)/cc-pVTZ  ",-((-308. - -308.) + (0.134072 - 0.126911) * 0.9)*Eh + R*0.518)
+print("")
+print("transition state 2    ")
+print("MK-MRCCSD/cc-pVDZ     ", -((-308.54310625 - -308.46541076) + (0.143473 - 0.136802) * 0.9)*Eh + R*0.518)
+print("MK-MRCCSD(T)/cc-pVDZ  ", -((-308.58966794 - -308.5212) + (0.143473 - 0.136802) * 0.9)*Eh + R*0.518)
+print("")
+print("dS J/mol-K at 518,273K")
+print("dS reagent            ")
+print("HF/SVP                ", 86.596*4.1868)
+print("HF/TZVP               ", 86.592*4.1868)
+print("MP2/cc-pVDZ           ", 90.162*4.1868)
+print("CCSD/cc-pVDZ          ", 89.930*4.1868)
+print("")
+print("dS TS-1")
+print("CASSCF(6.4)/SVP       ", 91.882*4.1868)
+print("CASSCF(8.5)/SVP       ", 91.265*4.1868)
+print("MK-MRCCSD/6-31G       ", 96.905*4.1868)
+print("")
+print("EXP ln(A)             ", "14.68 +- 0.44")
+print("HF-CASSCF(6,4)/SVP    ", log10(kT/h * exp((91.882 - 86.596)*4.1868/R) * exp(1) * sterical_factor))
+print("HF-CASSCF(8,5)/SVP    ", log10(kT/h * exp((91.265 - 86.596)*4.1868/R) * exp(1) * sterical_factor))
+print("(MK-MR)CCSD/6-31G+cc-pVDZ", log10(kT/h * exp((96.905 - 89.930)*4.1868/R) * exp(1) * sterical_factor))
+print("zero entropy          ", log10(kT/h * exp((0)*4.1868/R) * exp(1) * sterical_factor))

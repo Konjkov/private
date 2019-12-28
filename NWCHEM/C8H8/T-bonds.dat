@@ -1,12 +1,24 @@
 #                      R(H5-H7)/2 R(C6-C8)/2
-MP2/cc-pVDZ            1.50297048 1.33051792
-MP2/cc-pVTZ            1.52773530 1.31653657
-MP2/cc-pVQZ            
+#  T-cubane-1
 
-CCSD/cc-pVDZ           1.50355455 1.33405546
+#MP2/cc-pVDZ            1.50297048 1.33051792
+#MP2/cc-pVTZ            1.52773530 1.31653657
+#MP2/cc-pVQZ
 
-CCSD(T)/cc-pVDZ        1.72      1.33
+#CCSD/cc-pVDZ           1.50355455 1.33405546
 
-DFT/B3LYP/SVP          1.62049821 1.32877116
-DFT/B3LYP/TZVP         1.60997213 1.32313603
-DFT/B3LYP/QZVP         1.61020134 1.32343256
+#CCSD(T)/cc-pVDZ
+
+#DFT/B3LYP/SVP          1.62113834 1.32918521
+#DFT/B3LYP/TZVP         1.60997213 1.32313603
+#DFT/B3LYP/QZVP         1.61020134 1.32343256
+
+#  T-cubane-2
+
+MP2/cc-pVDZ            2.38154345 1.35499242
+MP2/cc-pVTZ            2.29879928 1.34093548
+MP2/cc-pVQZ
+
+CCSD/cc-pVDZ           2.35973112 1.35359231
+
+CCSD(T)/cc-pVDZ        2.3642     1.3566
