@@ -2,6 +2,9 @@
 
 set grid
 
+set xlabel "R(H5-H7)"
+set ylabel "R(C6-C8)"
+
 #plot "bonds.dat" using ($2*2):(($3-$2)*sqrt(3)) with linespoints notitle,\
 #     "bonds.dat" using ($2*2):(($3-$2)*sqrt(3)):1 with labels offset -6.0,-0.5 font "arial,8" notitle,\
 #     "equlibrium.dat" using 2:3:4:5 with xyerrorbars notitle,\
